@@ -7,35 +7,45 @@ ruby(1.9.3,1.8.7)とRedmine(2.0.0,1.4.2)で動作の確認をしています。
 
 ## インストール
 ### Redmine 1.4
- % cd REDMINE_ROOT
- % ./script/plugin install git://github.com/opengroove/redmine_fulmo_helper.git
+```
+% cd REDMINE_ROOT
+% ./script/plugin install git://github.com/opengroove/redmine_fulmo_helper.git
+```
 
 ### Redmine 2.0
- % cd REDMINE_ROOT/plugins
- % git clone git://githib.com/opengroove/redmine_fulmo_helper.git 
+```
+% cd REDMINE_ROOT/plugins
+% git clone git://githib.com/opengroove/redmine_fulmo_helper.git 
+```
 
 
 ## プロジェクトトラッカー一覧API
- /projects/:project_id/trackers.:format
+```
+/projects/:project_id/trackers.:format
+```
 
 _:project_id_で指定したプロジェクトで使用可能なトラッカーの一覧を戻します。
 
 ### リクエストの例
- GET /projects/1/trackers.xml
- GET /projects/redmine/trackers.xml
+```
+GET /projects/1/trackers.xml
+GET /projects/redmine/trackers.xml
+```
 
 ### レスポンスの例
- <?xml version="1.0" encoding="UTF-8"?>
- <trackers type="array">
-   <tracker>
-     <id>1</id>
-     <name>バグ</name>
-   </tracker>
-   <tracker>
-     <id>2</id>
-     <name>機能</name>
-   </tracker>
- </trackers>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<trackers type="array">
+  <tracker>
+    <id>1</id>
+    <name>バグ</name>
+  </tracker>
+  <tracker>
+    <id>2</id>
+    <name>機能</name>
+  </tracker>
+</trackers>
+```
 
 ### 権限
 「プロジェクトの閲覧(view_issues)」権限が必要です。
