@@ -15,20 +15,16 @@ ruby(1.9.3,1.8.7)とRedmine(2.0.0,1.4.2)で動作の確認をしています。
  % git clone git://githib.com/opengroove/redmine_fulmo_helper.git 
 
 
-== API
-このプラグインでは以下のAPIを提供しています。
-
-
-=== プロジェクトトラッカー一覧API
+== プロジェクトトラッカー一覧API
  /projects/:project_id/trackers.:format
 
 _:project_id_で指定したプロジェクトで使用可能なトラッカーの一覧を戻します。
 
-==== リクエストの例
+=== リクエストの例
  GET /projects/1/trackers.xml
  GET /projects/redmine/trackers.xml
 
-==== レスポンスの例
+=== レスポンスの例
  <?xml version="1.0" encoding="UTF-8"?>
  <trackers type="array">
    <tracker>
@@ -41,18 +37,18 @@ _:project_id_で指定したプロジェクトで使用可能なトラッカー�
    </tracker>
  </trackers>
 
-==== 権限
+=== 権限
 「プロジェクトの閲覧(view_issues)」権限が必要です。
 
-=== チケットフィールド一覧API
+== チケットフィールド一覧API
  /projects/:project_id/issues/attibutes.:format?tracker_id=:tracker_id
 
 チケットで使用可能なフィールドの一覧を戻します。指定されているプロジェクトとトラッカーに対してログインユーザーの権限で使用可能なフィールドを戻します。
 
-==== リクエストの例
+=== リクエストの例
  GET /projects/redmine/issues/attributes.xml?tracker_id=1
 
-==== レスポンスの例
+=== レスポンスの例
  <?xml version="1.0" encoding="UTF-8"?>
  <issue_attributes>
    <standard_attributes type="array">
@@ -100,8 +96,8 @@ _:project_id_で指定したプロジェクトで使用可能なトラッカー�
  </issue_attributes>
 
  
-==== 解説
-===== <format>
+=== 解説
+==== <format>
 <format>にはカスタムフィールドの「書式」の値がそのまま出力されます。
  string
  text
@@ -114,14 +110,14 @@ _:project_id_で指定したプロジェクトで使用可能なトラッカー�
  version
 ただし標準フィールドの「予定工数(esimated_hours)」については、「2h30m」などの特別な形式で入力が可能なので「hours」という値を出力します。
 
-===== <format_label>
+==== <format_label>
 <format>の表示用テキストが出力されます。
 
-===== <unit_label>
+==== <unit_label>
 単位の表示名称が出力されます。現在のバージョンでは「予定工数」フィールドで入力欄の後ろに続くテキストが出力されます。
 
-===== 要素の省略
+==== 要素の省略
 値が空文字列あるいはfalseの場合にはその要素が省略される場合があります。例えば<multiple>は値がtrueの場合には出力されますが値がfalseの場合には省略される場合があります。同様に<regexp>も、値が空の場合には省略される場合があります。
 
-==== 権限
+=== 権限
 「チケットの追加(add_issues)」権限が必要です。
