@@ -7,7 +7,7 @@ ruby(1.9.3,1.8.7)とRedmine(2.0.0,1.4.2)で動作の確認をしています。
 
 ## インストール
 ### Redmine 1.4
-```
+```sh
 % cd REDMINE_ROOT
 % ./script/plugin install git://github.com/opengroove/redmine_fulmo_helper.git
 ```
