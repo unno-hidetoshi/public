@@ -13,21 +13,21 @@ ruby(1.9.3,1.8.7)とRedmine(2.0.0,1.4.2)で動作の確認をしています。
 ```
 
 ### Redmine 2.0
-```
+```sh
 % cd REDMINE_ROOT/plugins
 % git clone git://githib.com/opengroove/redmine_fulmo_helper.git 
 ```
 
 
 ## プロジェクトトラッカー一覧API
-```
+```url
 /projects/:project_id/trackers.:format
 ```
 
 *:project_id* で指定したプロジェクトで使用可能なトラッカーの一覧を戻します。
 
 ### リクエストの例
-```
+```url
 GET /projects/1/trackers.xml
 GET /projects/redmine/trackers.xml
 ```
@@ -51,7 +51,7 @@ GET /projects/redmine/trackers.xml
 「プロジェクトの閲覧(view_issues)」権限が必要です。
 
 ## チケットフィールド一覧API
-```
+```url
 /projects/:project_id/issues/attibutes.:format?tracker_id=:tracker_id
 ```
 
