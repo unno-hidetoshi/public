@@ -1,4 +1,4 @@
-# チケット作成ヘルパーAPIプラグイン
+# fulmoヘルパープラグイン
 [fulmo](https://github.com/opengroove/fulmo)用に標準の[Redmine API](http://www.redmine.org/projects/redmine/wiki/Rest_api)では不足している機能を提供します。
 
 ## 環境
