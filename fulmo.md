@@ -143,3 +143,20 @@ version
 
 ### 権限
 「チケットの追加(add_issues)」権限が必要です。
+
+
+テストの実行
+------
+### Redmine 1.4
+```sh
+% cd REDMINE_ROOT
+% rake db:test:load
+% rake test:plugins PLUGIN=redmine_fulmo_helper TESTOPTS=-v
+```
+
+### Redmine 2.0
+```sh
+% cd REDMINE_ROOT
+% rake db:test:load
+% rake test TEST="plugins/redmine_fulmo_helper/test/**/*_test.rb" TESTOPTS=-v
+```
