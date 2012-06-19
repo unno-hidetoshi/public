@@ -2,9 +2,13 @@ fulmoヘルパープラグイン
 ======
 [fulmo](https://github.com/opengroove/fulmo)用に標準の[Redmine API](http://www.redmine.org/projects/redmine/wiki/Rest_api)では不足している機能を提供します。
 
-環境
+動作環境
 ------
-ruby(1.9.3,1.8.7)とRedmine(2.0.0,1.4.2)で動作の確認をしています。
+以下の環境で動作の確認をしています。
+ * Redmine 1.4.2 + ruby 1.8.7
+ * Redmine 1.4.2 + ruby 1.9.3
+ * Redmine 2.0.0 + ruby 1.8.7
+ * Redmine 2.0.0 + ruby 1.9.3
 
 
 インストール
