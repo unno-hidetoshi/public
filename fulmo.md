@@ -1,11 +1,14 @@
-# fulmoヘルパープラグイン
+fulmoヘルパープラグイン
+======
 [fulmo](https://github.com/opengroove/fulmo)用に標準の[Redmine API](http://www.redmine.org/projects/redmine/wiki/Rest_api)では不足している機能を提供します。
 
-## 環境
+環境
+------
 ruby(1.9.3,1.8.7)とRedmine(2.0.0,1.4.2)で動作の確認をしています。
 
 
-## インストール
+インストール
+------
 ### Redmine 1.4
 ```sh
 % cd REDMINE_ROOT
@@ -19,7 +22,8 @@ ruby(1.9.3,1.8.7)とRedmine(2.0.0,1.4.2)で動作の確認をしています。
 ```
 
 
-## プロジェクトトラッカー一覧API
+プロジェクトトラッカー一覧API
+------
 ```
 /projects/:project_id/trackers.:format
 ```
@@ -50,7 +54,8 @@ GET /projects/redmine/trackers.xml
 ### 権限
 「プロジェクトの閲覧(view_issues)」権限が必要です。
 
-## チケットフィールド一覧API
+チケットフィールド一覧API
+------
 ```
 /projects/:project_id/issues/attibutes.:format?tracker_id=:tracker_id
 ```
